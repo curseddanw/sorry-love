@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 80%, #7065b5, transparent 40%),
+        linear-gradient(135deg, #171735, #292957, #625c9e);
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 1150px;
+    width: 92%;
+    margin: auto;
+    padding: 35px 0 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.big-heart {
+    font-size: 65px;
+    color: #ff9bd4;
+    text-shadow: 0 0 25px #ff9bd4;
+    animation: heartbeat 1.5s infinite;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(38px, 7vw, 75px);
+    color: #ffe0f3;
+    text-shadow: 0 0 20px #ffb5e7;
+    margin: 5px 0 15px;
+}
+
+.header p {
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 1.8;
+    color: #f4eaff;
+}
+
+/* BAGIAN UTAMA */
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* KELINCI */
+
+.bunny-area {
+    flex: 0.85;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.bunny {
+    font-size: clamp(130px, 20vw, 220px);
+    filter: drop-shadow(0 15px 15px #11132b55);
+    animation: floating 3s ease-in-out infinite;
+}
+
+.bunny-heart {
+    font-size: 55px;
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    animation: heartbeat 1.5s infinite;
+}
+
+.sorry-sign {
+    display: inline-block;
+    background: #ffe0ec;
+    color: #6d477e;
+    padding: 12px 25px;
+    font-family: 'Pacifico', cursive;
+    font-size: 23px;
+    border: 4px solid #392b4e;
+    border-radius: 12px;
+    transform: rotate(-8deg);
+    box-shadow: 0 8px 15px #0003;
+    margin-top: -10px;
+}
+
+.bunny-caption {
+    color: #ffd7ef;
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+/* SURAT */
+
+.letter {
+    flex: 1.5;
+    padding: 35px;
+    background: #ffffff10;
+    border: 2px solid #bba3ed99;
+    border-radius: 28px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px #11112c35;
+    position: relative;
+}
+
+.letter-heart {
+    position: absolute;
+    top: -18px;
+    left: 25px;
+    font-size: 35px;
+    color: #ff9bd4;
+}
+
+.letter > p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #fff4ff;
+    margin-bottom: 15px;
+}
+
+/* GALERI FOTO */
+
+.photo-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.photo-section h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 23px;
+    color: #ffd0ec;
+    margin-bottom: 18px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.photo-card {
+    width: 30%;
+    min-width: 100px;
+    height: 155px;
+    padding: 5px;
+    background: #ffe4f4;
+    border-radius: 13px;
+    box-shadow: 0 5px 15px #0003;
+    transition: 0.3s;
+}
+
+.photo-card:nth-child(1) {
+    transform: rotate(-4deg);
+}
+
+.photo-card:nth-child(2) {
+    transform: rotate(4deg);
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.photo-caption {
+    color: #e9d5ff;
+    font-size: 12px;
+    margin-top: 17px;
+    font-style: italic;
+}
+
+/* TOMBOL */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+button {
+    padding: 15px 28px;
+    border-radius: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#forgiveBtn {
+    color: white;
+    background: linear-gradient(135deg, #ff80bd, #e39ce9);
+    border: none;
+    box-shadow: 0 5px 20px #ff80bd55;
+}
+
+#loveBtn {
+    color: white;
+    background: transparent;
+    border: 2px solid #e9a6e9;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 8px 25px #ff80bd66;
+}
+
+#response {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    color: #ffd5f0;
+    margin-top: 25px;
+    min-height: 40px;
+}
+
+footer {
+    text-align: center;
+    color: #e9d5ff;
+    font-size: 13px;
+    margin-top: 45px;
+}
+
+/* ANIMASI */
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* HATI BERTERBANG */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ffaddc;
+    pointer-events: none;
+    z-index: 1;
+    animation: rise 6s linear forwards;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* BINTANG */
+
+.star {
+    position: fixed;
+    background: white;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 750px) {
+    .container {
+        padding-top: 25px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .bunny-area {
+        width: 100%;
+    }
+
+    .bunny {
+        font-size: 145px;
+    }
+
+    .bunny-heart {
+        right: 20%;
+    }
+
+    .letter {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .letter > p {
+        font-size: 14px;
+    }
+
+    .photo-card {
+        height: 125px;
+    }
+
+    .buttons {
+        gap: 12px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 13px 20px;
+    }
+}
